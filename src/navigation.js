@@ -31,6 +31,7 @@ function navigator() {
         homePage();
     }
     
+    document.scrollTop = 0
 }
 
 function homePage() {
@@ -73,7 +74,7 @@ function categoriesPage() {
     // ['#category', 'id-name']
     const [_, categoryData] = location.hash.split('=');
     const [categoryId, categoryName] = categoryData.split('-');
-    
+
 
     headerCategoryTitle.innerHTML = categoryName;
 
