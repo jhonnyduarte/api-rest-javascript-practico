@@ -39,8 +39,8 @@ function homePage() {
     console.log('Home!!!');
 
 
-    headerSection.classList.remove('.header-container--long');
-    headerSection.computedStyleMap.background = '';
+    headerSection.classList.remove('header-container--long');
+    headerSection.style.background = '';
     arrowBtn.classList.add('inactive');
     arrowBtn.classList.remove('header-arrow--white');
     headerTitle.classList.remove('inactive');
@@ -58,7 +58,7 @@ function homePage() {
 function categoriesPage() {
     console.log('Categories!!!');
 
-    headerSection.classList.remove('.header-container--long');
+    headerSection.classList.remove('header-container--long');
     headerSection.computedStyleMap.background = '';
     arrowBtn.classList.remove('inactive');
     arrowBtn.classList.remove('header-arrow--white');
@@ -100,11 +100,15 @@ function movieDetailPage() {
     genericSection.classList.add('inactive');
     movieDetailSection.classList.remove('inactive');
 
+    // ['movie', 'id']
+    const [_, movieId] = location.hash.split('=');
+    getMovieById(movieId);
+
 }
 function searchPage() {
     console.log('Search!!!');
 
-    headerSection.classList.remove('.header-container--long');
+    headerSection.classList.remove('header-container--long');
     headerSection.computedStyleMap.background = '';
     arrowBtn.classList.remove('inactive');
     arrowBtn.classList.remove('header-arrow--white');
@@ -125,7 +129,7 @@ function searchPage() {
 function trendsPage() {
     console.log('TRENDS!!!');
 
-    headerSection.classList.remove('.header-container--long');
+    headerSection.classList.remove('header-container--long');
     headerSection.computedStyleMap.background = '';
     arrowBtn.classList.remove('inactive');
     arrowBtn.classList.remove('header-arrow--white');
